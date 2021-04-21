@@ -1,0 +1,61 @@
+
+
+<html>
+    <head>
+        <title> Taking Picture from webcam </title>
+    </head>
+    <style>
+    #camera{ width : 350px;
+             height : 350px;
+             border : 1px solid black;
+    }
+    body {
+      background-color: linen;
+    }
+
+    h1 {
+      color: black;
+      margin-left: 40px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background: #15485f;
+      font-size: 16px;
+      color: #fff;
+      }
+  
+    
+    </style>
+    
+    <body>
+        <h1>WebCam Functionality</h1>
+        <div id='camera'></div>
+        <button onclick='takeSnapShot()'>Take Shapshot</button>
+        <div id="results" ></div>
+        <form action="/">
+        <input type="submit" value="Go to Home" />
+       </form>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js" integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw==" crossorigin="anonymous"></script>
+    <script language="JavaScript">
+     Webcam.set({
+      width: 320,
+      height: 300,
+      image_format: 'jpeg',
+      jpeg_quality: 90,
+      
+        });
+     Webcam.attach( '#camera' );
+     takeSnapShot = function () {
+     Webcam.snap(function (data_uri) {
+        document.getElementById('results').innerHTML = 
+                '<img src="' + data_uri + '" width="200px" height="200px" />';
+        });
+    }
+    </script>
+
+</html>
+

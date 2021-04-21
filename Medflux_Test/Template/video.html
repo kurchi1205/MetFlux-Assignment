@@ -1,0 +1,38 @@
+
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+  </head>
+  <style>
+    
+    body {
+      background-color: linen;
+    }
+
+    h1 ,h4{
+      color: black;
+      margin-left: 40px;
+    }
+    
+
+    input {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background: #15485f;
+      font-size: 16px;
+      color: #fff;
+      }
+  
+    
+   </style>
+  <body>
+    <h1>Video Streaming Demonstration</h1>
+    <h4>Please Wait for a while </h4>
+    <img id="bg" src="{{ url_for('video_feed') }}" >
+    
+    <form action="/">
+        <input type="submit" value="Go to Home" />
+   </form>
+  </body>
+</html>
