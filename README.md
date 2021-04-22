@@ -18,3 +18,8 @@
 - upload.html - Uploads Images 
 - complete.html - Displays the uploaded image with face detected 
 - video.html - Displays the webcam video with face detected.
+
+#### References
+- https://makitweb.com/how-to-capture-picture-from-webcam-with-webcam-js/
+- https://www.c-sharpcorner.com/article/detecting-faces-from-image-and-video-using-python/
+- https://github.com/ibrahimokdadov/upload_file_python
